@@ -1,0 +1,17 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/afficheurs/classiques/departs": "pages/afficheurs/classiques/departs.js",
+  "/api/track-assignments": "pages/api/track-assignments.js",
+  "/admin/gestion-horaires": "pages/admin/gestion-horaires.js",
+  "/admin/stations": "pages/admin/stations.js",
+  "/api/stations": "pages/api/stations.js",
+  "/admin/horaires": "pages/admin/horaires.js",
+  "/api/entreprise": "pages/api/entreprise.js",
+  "/api/schedules": "pages/api/schedules.js",
+  "/api/schedule-folders": "pages/api/schedule-folders.js",
+  "/api/train-types": "pages/api/train-types.js",
+  "/api/materiels-roulants": "pages/api/materiels-roulants.js",
+  "/api/schedules/by-station": "pages/api/schedules/by-station.js"
+}
