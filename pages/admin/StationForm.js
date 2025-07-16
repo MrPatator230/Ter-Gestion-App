@@ -1,17 +1,17 @@
 import React from 'react';
 
 const StationForm = ({
-  name,
-  setName,
-  categories,
-  setCategories,
-  locationType,
-  setLocationType,
-  allCategories = [],
-  handleCategoryToggle,
-  handleSubmit,
-  editIndex,
-  cancelEdit,
+  name = '',
+  setName = () => {},
+  categories = [],
+  setCategories = () => {},
+  locationType = 'Ville',
+  setLocationType = () => {},
+  allCategories = ['TER', 'TGV', 'Intercités', 'FRET', 'Autres'],
+  handleCategoryToggle = () => {},
+  handleSubmit = (e) => { e.preventDefault(); },
+  editIndex = null,
+  cancelEdit = () => {},
 }) => {
   return (
     <form onSubmit={handleSubmit} className="mb-4">
@@ -30,13 +30,13 @@ const StationForm = ({
       <div className="form-group mb-3">
         <label>Catégories</label>
         <div className="border rounded p-3">
-          {allCategories.map((category) => (
+          {(allCategories || []).map((category) => (
             <div key={category} className="form-check form-check-inline me-3 mb-2">
               <input
                 type="checkbox"
                 className="form-check-input"
                 id={`category-${category}`}
-                checked={categories.includes(category)}
+                checked={categories?.includes(category) || false}
                 onChange={() => handleCategoryToggle(category)}
               />
               <label 
@@ -49,7 +49,7 @@ const StationForm = ({
             </div>
           ))}
         </div>
-        {categories.length === 0 && (
+        {(categories?.length || 0) === 0 && (
           <small className="text-danger">Veuillez sélectionner au moins une catégorie</small>
         )}
       </div>
